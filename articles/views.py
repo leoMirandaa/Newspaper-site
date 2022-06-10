@@ -1,10 +1,11 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
 
 from django.views.generic import (
   ListView,
   CreateView,
   UpdateView,
-  DeleteView
+  # DeleteView
 )
 
 from .models import Article
@@ -18,13 +19,18 @@ class ArticlesCreateView(CreateView):
     model = Article
     template_name = "articles/new.html"
     fields = '__all__'
-    success_url = '/articles/'
+    success_url = reverse_lazy('articles')
 
+class ArticleUpdateView(UpdateView):
+    model = Article
+    template_name = "articles/update.html"
+    fields = '__all__'
+    success_url = reverse_lazy('articles')
 
-# class ArticleUpdateView(UpdateView):
-#     model = Article
-#     template_name = "article/update.html"
-
+    # def test_func(self):
+    #     article = self.get_object()
+    #     print('**** ',article)
+    #     return article.id == self.request.article
 
 # class ArticleDeleteView(DeleteView):
 #     model = Article

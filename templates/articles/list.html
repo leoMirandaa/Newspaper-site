@@ -12,8 +12,8 @@
       <h5 class="card-title">Title: {{article.title}}</h5>
       <h6 class="card-subtitle mb-2 text-muted">Author: {{article.author}}</h6>
         <p class="card-text">Note: {{article.body}}</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+        <a href="{% url 'update-article' post.id %}" class="btn btn-delete" style="width:80%">Delete</a>
+        <a href="#" class="card-link">Delete article</a>
       </div>
     </div>
     {% empty %}
