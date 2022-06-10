@@ -7,13 +7,13 @@
   <h1>Article List</h1>
   <!-- {{object_list}} -->
   {% for article in article_list %}
-  <div class="card mb-3" style="width: 100%; background-color: transparent;">
+  <div class="card mb-3 card-style" style="width: 100%; background-color: transparent;">
     <div class="card-body">
       <h5 class="card-title">Title: {{article.title}}</h5>
       <h6 class="card-subtitle mb-2 text-muted">Author: {{article.author}}</h6>
         <p class="card-text">Note: {{article.body}}</p>
-        <a href="{% url 'update-article' article.id %}" class="btn btn-delete" style="width:80%">Update</a>
-        <a href="#" class="card-link">Delete article</a>
+        <a href="{% url 'update-article' article.id %}" class="btn btn-warning" style="width:45%">Update</a>
+        <a href="{% url 'update-article' article.id %}" class="btn btn-danger" style="width:45%">DELETE</a>
       </div>
     </div>
     {% empty %}

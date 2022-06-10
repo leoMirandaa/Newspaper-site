@@ -23,3 +23,12 @@ body {
   text-align: center;
   font-weight: bolder;
 }
+
+.navbar-style {
+  border-top: solid 2px gray;
+  border-bottom: solid 2px gray;
+}
+
+.card-style {
+  border: solid 2px gray;
+}

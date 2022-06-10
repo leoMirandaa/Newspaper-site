@@ -27,11 +27,6 @@ class ArticleUpdateView(UpdateView):
     fields = '__all__'
     success_url = reverse_lazy('articles')
 
-    # def test_func(self):
-    #     article = self.get_object()
-    #     print('**** ',article)
-    #     return article.id == self.request.article
-
 # class ArticleDeleteView(DeleteView):
 #     model = Article
 #     template_name = "articles/delete.html"
