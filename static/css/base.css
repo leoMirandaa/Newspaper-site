@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+h1,h2, h3, h4, h5, h6 {
+  /* font-weight: bold; */
+}
+
+body {
+  background-image: url(../img/newspaper.jpg);
+  background-size: cover;
+  text-align: justify;
+  font-family: 'Gloria Hallelujah', cursive;
+  /* font-weight: bold; */
+}
+
+.navbar-nav .nav-link {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.main-title {
+  font-size: 5rem;
+  /* color: red; */
+  text-align: center;
+  font-weight: bolder;
+}
