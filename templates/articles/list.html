@@ -13,7 +13,7 @@
       <h6 class="card-subtitle mb-2 text-muted">Author: {{article.author}}</h6>
         <p class="card-text">Note: {{article.body}}</p>
         <a href="{% url 'update-article' article.id %}" class="btn btn-warning" style="width:45%">Update</a>
-        <a href="{% url 'update-article' article.id %}" class="btn btn-danger" style="width:45%">DELETE</a>
+        <a href="{% url 'delete-article' article.id %}" class="btn btn-danger" style="width:45%">DELETE</a>
       </div>
     </div>
     {% empty %}

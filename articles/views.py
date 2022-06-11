@@ -5,7 +5,7 @@ from django.views.generic import (
   ListView,
   CreateView,
   UpdateView,
-  # DeleteView
+  DeleteView
 )
 
 from .models import Article
@@ -27,7 +27,8 @@ class ArticleUpdateView(UpdateView):
     fields = '__all__'
     success_url = reverse_lazy('articles')
 
-# class ArticleDeleteView(DeleteView):
-#     model = Article
-#     template_name = "articles/delete.html"
 
+class ArticleDeleteView(DeleteView):
+    model = Article
+    template_name = "articles/delete.html"
+    success_url = '/'

@@ -25,7 +25,7 @@ class Article(models.Model):
   created_on = models.DateTimeField(auto_now_add=True)
 
   def __str__(self):
-    return self.title + ' ' + str(self.author) + ' ' + self.body
+    return str(self.id) + ' - ' + self.title + ' - ' + str(self.author) + ' - ' + self.body
 
   def get_absolute_url(self):
     return reverse('article_detail', args=[self.id])
