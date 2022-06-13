@@ -1,15 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 h1,h2, h3, h4, h5, h6 {
-  /* font-weight: bold; */
 }
 
 body {
-  background-image: url(../img/newspaper.jpg);
-  background-size: cover;
-  text-align: justify;
   font-family: 'Gloria Hallelujah', cursive;
-  /* font-weight: bold; */
+  text-align: justify;
+  /* background: #8B9CB0; */
+  /* background-image: url(../img/table.jpg); */
+  background-size: cover;
+  /* background-position: left left; */
+}
+
+.main-container {
+  /* background-image: url(../img/newspaper3.jpg); */
+  /* background-size: cover; */
+  min-height: 100vh;
+  max-height: 100%;
+  width: 1050px;
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 3px;
+  /* opacity: 0.9; */
 }
 
 .navbar-nav .nav-link {
@@ -18,17 +31,32 @@ body {
 }
 
 .main-title {
-  font-size: 5rem;
-  /* color: red; */
+  font-size: 4.5rem;
   text-align: center;
   font-weight: bolder;
 }
 
 .navbar-style {
-  border-top: solid 2px gray;
-  border-bottom: solid 2px gray;
+  border-top: double 5px black;
+  border-bottom: double 5px black;
 }
 
 .card-style {
-  border: solid 2px gray;
+  border: double 5px black;
 }
+
+.btn-confirm {
+  background: #B2815D;
+}
+
+.btn-delete {
+  background: #412512;
+  color: white;
+}
+
+p > a {
+  color: #764a2a;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+

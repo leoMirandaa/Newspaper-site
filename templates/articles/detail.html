@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ article.title }}{% endblock title%}
+
+{% block content %}
+  <h1>{{ article.title }}</h1>
+  <div class="detail-container">
+    <small>By {{ article.author }} | on: {{ article.created_on }}</small>
+
+    <p class="my-3">{{ article.body }}</p>
+    {% if user.is_authenticated %}
+
+    <div class="row">
+      <div class="col-md-3">
+        <a href="{% url 'update-article' article.id %}" class="btn btn-edit" style="width:80%">Edit</a>
+      </div>
+
+      <div class="col-md-3">
+        <a href="{% url 'delete-article' article.id %}" class="btn btn-delete" style="width:80%">Delete</a>
+      </div>
+    </div>
+  </div>
+
+  {% endif %}
+{% endblock content %}
+

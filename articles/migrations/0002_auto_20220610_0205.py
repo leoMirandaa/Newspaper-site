@@ -4,9 +4,10 @@ from django.db import migrations
 
 def populate_sections(apps, schemaeditor):
     sections = {
+        "Main": "Main section...",
         "Sport": "Sport section...",
         "Social": "Social section...",
-        "Entertainment": "Entertainment section..."
+        "Entertainment": "Entertainment section...",
     }
     #name app , name model
     Section = apps.get_model('articles', 'Section')

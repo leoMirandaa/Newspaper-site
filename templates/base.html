@@ -13,43 +13,52 @@
 
 </head>
 <body>
-  <div>
-    <h1 class="main-title">NewsPaper the Heroe</h1>
-  </div>
-  <nav class="navbar navbar-expand-lg my-4 navbar-style">
-    <div class="container-fluid ">
-      <a class="navbar-brand" href="{% url 'home' %}">Newspaper HERO | </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarNav">
-        <ul class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-            <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Articles
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="{% url 'articles' %}">See all articles</a></li>
-                <li><a class="dropdown-item" href="{% url 'new-article' %}">Create new article</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-
-            <a class="nav-link" href="{% url 'login' %}">Log In</a>
-            <a class="nav-link" href="{% url 'signup' %}">SignUp</a>
-            <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
-
-        </ul>
-      </div>
+  <div class="main-container">
+    <div>
+      <h1 class="main-title">NewsPaper the Hero</h1>
     </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg mt-4 navbar-style">
+      <div class="container-fluid ">
+        <a class="navbar-brand" href="{% url 'home' %}">JUNE 2022</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Articles
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="{% url 'articles' %}">See all articles</a></li>
+                  <li><a class="dropdown-item" href="{% url 'new-article' %}">Create new article</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
 
-  <div class="container">
-    {% block content %}
-    {% endblock content %}
+              <a class="nav-link" href="{% url 'login' %}">Log In</a>
+              <a class="nav-link" href="{% url 'signup' %}">SignUp</a>
+              <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div style="width: 40%;" class="mt-2 mb-5">
+      <ul style="display:flex; justify-content: space-between;" >
+        <a style="color: gray;" href="{% url 'enternainment_list' %}">Entertainment</a> |
+        <a style="color: gray;" href="{% url 'social_list' %}">Social</a> |
+        <a style="color: gray;" href="{% url 'sports_list' %}">Sports</a>
+      </ul>
+    </div>
+
+    <div class="container">
+      {% block content %}
+      {% endblock content %}
+    </div>
   </div>
 
   <!-- JavaScript Bundle with Popper -->
