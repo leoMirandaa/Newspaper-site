@@ -1,6 +1,7 @@
 # FSDI 113 Assignment 2
-## User Auth
+## Password change news app
 
-1. Upload your user authentication app with bootstrap templates. You must provide a link to your github repository as well as a link to your app on heroku in the README file.
+
+1. Note: This is not password reset, it's password change. Upload your password change app to both GitHub and Heroku. Be sure to include the link to your Heroku-hosted application in the README file
 ## Heroku Link
 https://fierce-bastion-71490.herokuapp.com/
