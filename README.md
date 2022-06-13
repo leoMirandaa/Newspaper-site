@@ -1,4 +1,4 @@
-# FSDI 113 Assignment 2
+# FSDI 113 Assignment 3
 ## Password change news app
 
 
