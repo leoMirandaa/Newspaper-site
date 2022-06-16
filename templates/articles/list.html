@@ -11,7 +11,7 @@
         <!-- <li>{{article.title}}</li> -->
         {% if user.is_authenticated %}
         <li>
-          <a href="{% url 'article_detail' article.id%}" style="color: gray;">{{article.title}}</a>
+          <a href="{% url 'article_detail' article.id%}" style="color: #764a2a;">{{article.title}}</a>
         </li>
         {%endif%}
       {% endfor %}

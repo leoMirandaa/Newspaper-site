@@ -57,6 +57,7 @@ class EntertainmentArticleListView(ArticleListView):
 class ArticleDetailView(LoginRequiredMixin,DetailView):
     model = Article
     template_name = "articles/detail.html"
+    fields = ['title', 'section', 'body']
 
 
 class ArticlesCreateView(LoginRequiredMixin,UserPassesTestMixin,CreateView):
@@ -66,8 +67,8 @@ class ArticlesCreateView(LoginRequiredMixin,UserPassesTestMixin,CreateView):
     success_url = reverse_lazy('articles')
 
     def test_func(self):
-        print('********** ',self.request.user.role)
-        return self.request.user.role > 1
+        print('********** ',self.request.user.role.id)
+        return self.request.user.role.id > 1
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -76,13 +77,13 @@ class ArticlesCreateView(LoginRequiredMixin,UserPassesTestMixin,CreateView):
 class ArticleUpdateView(LoginRequiredMixin, UserPassesTestMixin,UpdateView):
     model = Article
     template_name = "articles/update.html"
-    # fields = '__all__'
+    fields = '__all__'
     # success_url = reverse_lazy('articles')
 
     def test_func(self):
-        if self.request.user.role > 1:
+        if self.request.user.role.id > 1:
             article = self.get_object()
-            return article.author == self.request.author
+            return article.author == self.request.user
         return False
 
 class ArticleDeleteView(DeleteView):
@@ -91,7 +92,7 @@ class ArticleDeleteView(DeleteView):
     success_url = reverse_lazy('articles')
 
     def test_func(self):
-        if self.request.user.role > 1:
+        if self.request.user.role.id > 1:
             article = self.get_object()
-            return article.author == self.request.author
+            return article.author == self.request.user
         return False

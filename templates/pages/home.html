@@ -1,11 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-  <div class="">
-    <h1>Welcome to the Newspaper</h1>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eligendi dolore nulla labore voluptas! Nesciunt vitae accusantium aliquid accusamus dolorum inventore, excepturi ullam necessitatibus suscipit ratione, dignissimos, atque modi blanditiis.!</p>
+<h1 class="mb-4" style="text-align: center">Where is Batman?</h1>
+<div class="container ">
+  <div class="row">
+    <div class="col-7 justify-content-center first-column-home">
+      <img class="batman1-img"  src="{% static 'img/batman.png' %}" alt=""  width="50%">
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis tempora voluptatibus quasi illo provident adipisci nobis nam alias unde laudantium dolores ipsum beatae quos ipsam modi laboriosam eius quaerat quis voluptates rerum, id nulla aliquam, quae eos. Ratione quasi repudiandae dicta possimus nisi. Animi porro ipsum distinctio excepturi, eveniet minima quae sunt fugit. Facere at voluptas cupiditate commodi reiciendis veniam accusamus quibusdam. Eaque alias quas beatae dolor aut laudantium illo id error soluta fugit totam, harum ut qui voluptatum, deleniti corrupti facilis quaerat culpa maiores! Quas illum maxime nam natus modi aut unde repudiandae alias quaerat debitis explicabo, veniam suscipit.</sp>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum natus quod accusantium facilis sed fuga recusandae esse doloribus ea voluptate eius iure autem, vel saepe voluptates modi eligendi totam quaerat?</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum natus quod accusantium facilis sed fuga recusandae esse doloribus ea voluptate eius iure autem, vel saepe voluptates modi eligendi totam quaerat?</p>
+      </div>
+    <div class="col-5 justify-content-center second-column-home">
+      <h3 style="border-top: 1px solid #000;border-bottom: 1px solid #000">Hero Stadium. <br> The Batman's band!</h3>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis tempora voluptatibus quasi illo provident adipisci nobis nam alias unde laudantium dolores ipsum beatae quos ipsam modi laboriosam eius quaerat quis voluptates rerum, id nulla aliquam, quae eos. Ratione quasi repudiandae dicta possimus nisi. Animi porro ipsum distinctio excepturi, eveniet minima quae sunt fugit. Facere at voluptas cupiditate commodi reiciendis veniam accusamus quibusdam. Eaque alias quas beatae dolor aut laudantium illo id error soluta fugit totam, harum ut qui voluptatum, deleniti corrupti facilis quaerat culpa maiores! Quas illum maxime nam natus modi aut unde repudiandae alias quaerat debitis explicabo, veniam suscipit.</p>
+    </div>
+    <!-- <div class="col-3 justify-content-center">
+      Column
+    </div> -->
   </div>
+</div>
 {% endblock content %}
